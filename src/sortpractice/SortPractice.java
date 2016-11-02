@@ -14,16 +14,7 @@ import java.util.Arrays;
  */
 public class SortPractice {
     
-    public static Integer[] generateArray() {
-        int len = (int) (Math.random() * 100);
-        Integer[] out = new Integer[len];
-        for(int i = 0; i < len; i++) {
-            out[i] = (int) (Math.random() * 100);
-        }
-        return out;
-    }
-    
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         System.out.println("generated array:");
         Integer[] arr = generateArray();
         printArray(arr);
@@ -47,6 +38,15 @@ public class SortPractice {
         tmpArr = Arrays.copyOf(arr, arr.length);
         radixSort(tmpArr);
         printArray(tmpArr);
+    }
+    
+    public static Integer[] generateArray() {
+        int len = (int) (Math.random() * 100);
+        Integer[] out = new Integer[len];
+        for(int i = 0; i < len; i++) {
+            out[i] = (int) (Math.random() * 100);
+        }
+        return out;
     }
     
     public static <T> void printArray(T[] arr) {
