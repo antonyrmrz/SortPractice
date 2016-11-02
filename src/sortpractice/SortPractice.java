@@ -38,6 +38,11 @@ public class SortPractice {
         tmpArr = Arrays.copyOf(arr, arr.length);
         radixSort(tmpArr);
         printArray(tmpArr);
+        
+        System.out.println("merge sort: ");
+        tmpArr = Arrays.copyOf(arr, arr.length);
+        mergeSort(tmpArr);
+        printArray(tmpArr);
     }
 
     public static Integer[] generateArray() {
@@ -85,11 +90,7 @@ public class SortPractice {
     }
 
     public static <T extends Comparable> void mergeSort(T[] arr) {
-
-    }
-
-    public static <T extends Comparable> void mergeSort(T[] arr, int low, int high) {
-
+        new MergeSorter<T>(arr).sort();
     }
 
     public static <T extends Comparable> void quickSort(T[] arr) {
